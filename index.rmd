@@ -25,4 +25,6 @@ klippy::klippy(position = c('top', 'right'), all_precode = T)
 ```
 
 
-To do
+To do:
+
+- Fix \@ref(shaped-images-html)

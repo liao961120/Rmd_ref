@@ -61,7 +61,7 @@ if (knitr::is_html_output()) {
   ...
 }
 
-if (knitr::opts_knit$get('rmarkdown.pandoc.to') == "latex")
+if (knitr::opts_knit$get('rmarkdown.pandoc.to') == "latex") {
   ...
 }
 ```
