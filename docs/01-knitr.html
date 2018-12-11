@@ -291,9 +291,9 @@ ttest &lt;-<span class="st"> </span><span class="kw">t.test</span>(tr1, tr2, <sp
 diff &lt;-<span class="st"> </span>ttest[[<span class="st">&quot;estimate&quot;</span>]][[<span class="st">&quot;mean of the differences&quot;</span>]]
 p_val &lt;-<span class="st"> </span>ttest[[<span class="st">&quot;p.value&quot;</span>]]</code></pre></div>
 <ol style="list-style-type: decimal">
-<li><p>The mean difference between the two groups is 0.226.</p>
+<li><p>The mean difference between the two groups is 0.343.</p>
 <div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">The mean difference between the two treatments is `r round(diff, 3)`.</code></pre></div></li>
-<li><p>The <em>p</em>-value of the paired t-test is 0.305, which is not significant.</p>
+<li><p>The <em>p</em>-value of the paired t-test is 0.2244, which is not significant.</p>
 <div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex">    The *p*-value of the paired t-test is `r round(p_val, 4)`, which is `r ifelse(p_val&lt;=0.05, &quot;&quot;, &quot;not&quot;)` significant.</code></pre></div></li>
 </ol>
 </div>
@@ -581,7 +581,7 @@ Add color through <span style="color:rgba(255, 0, 0, 1)">span style</span>
 <span class="dt">               )</span>
 <span class="st">```</span></code></pre></div>
 <div class="figure"><span id="fig:unnamed-chunk-29"></span>
-<img src="ntu-bookdown_files/figure-html/unnamed-chunk-29-1.svg" alt="An Caption of the Plot" width="528" />
+<img src="Rmd_ref_files/figure-html/unnamed-chunk-29-1.svg" alt="An Caption of the Plot" width="528" />
 <p class="caption">
 Figure 11.1: An Caption of the Plot
 </p>
