@@ -1970,9 +1970,9 @@ ttest &lt;-<span class="st"> </span><span class="kw">t.test</span>(tr1, tr2, <sp
 diff &lt;-<span class="st"> </span>ttest[[<span class="st">&quot;estimate&quot;</span>]][[<span class="st">&quot;mean of the differences&quot;</span>]]
 p_val &lt;-<span class="st"> </span>ttest[[<span class="st">&quot;p.value&quot;</span>]]</code></pre>
 <ol style="list-style-type: decimal">
-<li><p>The mean difference between the two groups is -0.327.</p>
+<li><p>The mean difference between the two groups is 0.58.</p>
 <pre class="sourceCode latex"><code class="sourceCode latex">The mean difference between the two treatments is `r round(diff, 3)`.</code></pre></li>
-<li><p>The <em>p</em>-value of the paired t-test is 0.3162, which is not significant.</p>
+<li><p>The <em>p</em>-value of the paired t-test is 0.0067, which is significant.</p>
 <pre class="sourceCode latex"><code class="sourceCode latex">    The *p*-value of the paired t-test is `r round(p_val, 4)`, which is `r ifelse(p_val&lt;=0.05, &quot;&quot;, &quot;not&quot;)` significant.</code></pre></li>
 </ol>
 </div>
