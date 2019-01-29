@@ -30,21 +30,23 @@ It is possible to write R Markdown in separated files and combine them together 
 
 `main.Rmd`: 
 
-    ---
-    title: "This is Title"
-    author: "Yongfu Liao"
-    output: html_document
-    ---
+````Rmd
+---
+title: "This is Title"
+author: "Yongfu Liao"
+output: html_document
+---
 
-    `r ''````{r setup}
-    options(knitr.duplicate.label = 'allow')
-    ```
+`r ''````{r setup}
+options(knitr.duplicate.label = 'allow')
+```
 
-    `r ''````{r child="part1.Rmd"}
-    ```
+`r ''````{r child="part1.Rmd"}
+```
 
-    `r ''````{r child="part2.Rmd"}
-    ```
+`r ''````{r child="part2.Rmd"}
+```
+````
 
 The skeleton file that combines several R Markdown files. Only this file is rendered, other R Markdown files will automatically be inserted in the knitting process.
 
@@ -96,15 +98,35 @@ p_val <- ttest[["p.value"]]
     ```
 
 
-# Display Code Chunk with Code Chunk
+
+# Escaping knitr Special Characters
+
+We may sometimes encounter a situation in which we want to show snippets of R Markdown that have special meaning verbatimly, such as &#96;&#96;r fun()&#96;&#96; or R code chunks.
+
+## Display Inline R Code Chunks Verbatimly
+
+Instead of wrapping the code chunk directly with "<code>&#96;</code>", use "`&#96;`" instead:
+
+Use
+    
+`<code>&#96;r knitr::combine_words(names(iris))&#96;</code>`
+
+to show
+
+<code>
+&#96;r knitr::combine_words(names(iris))&#96;
+</code>
+
+
+## Display knitr Code Chunks Verbatimly
+
+knitr code chunks (with forms like <code>&#96;&#96;&#96;{r}</code>) will be executed when knitting the Rmd file. In order to show knitr code chunks verbatimly, one has to **suppress** the execution of the code chunks by **adding <code>&#96;r \'\'&#96;</code> in front of** <code>&#96;&#96;&#96;{r}</code> and then wrap the whole chunk with **four backticks**:
 
 ```{r include=F}
 code <- htmltools::HTML("<code>`r ''`</code>")
 ```
 
-Wrap the code chunk you want to display (without running the code inside) inside **four ticks**: 
-
-`````rmd
+`````Rmd    
 ````Rmd
 `r code````{r}
 Some R Code

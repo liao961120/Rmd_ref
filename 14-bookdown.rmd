@@ -1,5 +1,3 @@
-# (PART) **Advanced** {-}
-
 # Printing Bookdown to PDF
 
 Although bookdown nicely provides options to render the book to PDF formats, setting up things related to LaTeX can still be demanding, especially for people not familiar with LaTeX. To make bookdown nicely render elements properly to both HTML and PDF also takes some additional efforts. You have to make sure not to use pure HTML or LaTeX commands in Rmd files.

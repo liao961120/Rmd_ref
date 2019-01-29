@@ -6,6 +6,8 @@ date: "`r format(Sys.Date(), '%B %e, %Y')`"
 bibliography: /home/liao/local_depend/citation/neanderthals.bib
 csl: /home/liao/local_depend/style_sheets/apa.csl
 link-citations: yes
+link-as-note: true
+paged-footnotes: true
 ---
 
 ```{r setup, include=FALSE}

@@ -16,7 +16,7 @@ The 3 type of code can be useful in the situation below:
 ---
 title: "A Title"
 author: "Someone"
-date: "`r str_date`"
+date: "`r Sys.Date()`"
 ---
 
 ... Some content in the first page (title page) ...

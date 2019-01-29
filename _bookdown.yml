@@ -16,6 +16,6 @@ language:
     proof: 'Proof. '
     remark: 'Remark. '
     solution: 'Solution. '
-#  ui:
-#    chapter_name: ['第 ', ' 章'] # "Chapter "
+  ui:
+    chapter_name: ['第 ', ' 章'] # "Chapter "
     

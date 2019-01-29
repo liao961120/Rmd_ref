@@ -1,3 +1,14 @@
+#pagedown::book_crc:
+rmdformats::readthedown:
+  use_bookdown: true
+  number_sections: true
+  toc_depth: 2
+pagedown::book_crc:
+  toc: true
+  number_sections: true
+  self_contained: true
+  pandoc_args: "--mathjax"
+  mathjax: NULL
 bookdown::gitbook:
   output_dir: docs
   split_by: rmd
