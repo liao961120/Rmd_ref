@@ -18,3 +18,24 @@ blockquote > p:first-child {
       page-break-inside: avoid;
   }
 }
+
+pre code, pre, code {
+  white-space: pre-wrap ;
+  overflow-x: scroll !important;
+  word-break: keep-all ;
+  word-wrap: initial ;
+}
+
+/* Hide scroll bar in code chunk */
+pre.sourceCode {
+  margin-bottom: 5px;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
