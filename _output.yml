@@ -6,6 +6,9 @@ bookdown::html_document2:
   toc: true
   toc_float: true
   toc_depth: 2
+  includes:
+    in_header: ['addons/target_blank.js', 'addons/GA.html']
+  css: addons/style.css
 rmdformats::readthedown:
   use_bookdown: true
   number_sections: true
