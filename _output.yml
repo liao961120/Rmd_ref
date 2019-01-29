@@ -1,4 +1,11 @@
 #pagedown::book_crc:
+bookdown::html_document2:
+  theme: united
+  highlight: tango
+  df_print: paged
+  toc: true
+  toc_float: true
+  toc_depth: 2
 rmdformats::readthedown:
   use_bookdown: true
   number_sections: true
