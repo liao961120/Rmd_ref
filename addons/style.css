@@ -28,7 +28,7 @@ pre code, pre, code {
 
 /* Hide scroll bar in code chunk */
 pre.sourceCode {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 body {
