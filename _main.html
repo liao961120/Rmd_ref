@@ -11,7 +11,7 @@
 
 <meta name="author" content="Yongfu Liao" />
 
-<meta name="date" content="2019-01-29" />
+<meta name="date" content="2019-01-30" />
 
 <title>R Markdown Features</title>
 
@@ -3085,7 +3085,8 @@ page-break-inside: avoid;
 }
 pre code, pre, code {
 white-space: pre-wrap ;
-overflow-x: scroll !important;
+overflow-x: auto !important;
+
 word-break: keep-all ;
 word-wrap: initial ;
 }
@@ -3313,7 +3314,7 @@ div.tocify {
 <h1 class="title toc-ignore">R Markdown Features</h1>
 <h3 class="subtitle"><em>A Compact Reference</em></h3>
 <h4 class="author"><em><a href="https://liao961120.github.io/">Yongfu Liao</a></em></h4>
-<h4 class="date"><em>January 29, 2019</em></h4>
+<h4 class="date"><em>January 30, 2019</em></h4>
 
 </div>
 
@@ -3545,9 +3546,9 @@ ttest &lt;-<span class="st"> </span><span class="kw">t.test</span>(tr1, tr2, <sp
 diff &lt;-<span class="st"> </span>ttest[[<span class="st">&quot;estimate&quot;</span>]][[<span class="st">&quot;mean of the differences&quot;</span>]]
 p_val &lt;-<span class="st"> </span>ttest[[<span class="st">&quot;p.value&quot;</span>]]</code></pre>
 <ol style="list-style-type: decimal">
-<li><p>The mean difference between the two groups is 0.002.</p>
+<li><p>The mean difference between the two groups is 0.063.</p>
 <pre class="sourceCode latex"><code class="sourceCode latex">The mean difference between the two treatments is `r round(diff, 3)`.</code></pre></li>
-<li><p>The <em>p</em>-value of the paired t-test is 0.995, which is not significant.</p>
+<li><p>The <em>p</em>-value of the paired t-test is 0.8151, which is not significant.</p>
 <pre class="sourceCode latex"><code class="sourceCode latex">    The *p*-value of the paired t-test is `r round(p_val, 4)`, which is `r ifelse(p_val&lt;=0.05, &quot;&quot;, &quot;not&quot;)` significant.</code></pre></li>
 </ol>
 </div>
@@ -3870,7 +3871,7 @@ This LaTeX code suppress the page number.</p></li>
 <pre class="sourceCode tex"><code class="sourceCode latex">---
 title: &quot;A Title&quot;
 author: &quot;Someone&quot;
-date: &quot;2019-01-29&quot;
+date: &quot;2019-01-30&quot;
 ---
 
 ... Some content in the first page (title page) ...
