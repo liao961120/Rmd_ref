@@ -11,12 +11,12 @@ title: "R Markdown Features"
 subtitle: "A Compact Reference"
 author: "[Yongfu Liao](https://liao961120.github.io/)"
 date: "`r format(Sys.Date(), '%B %e, %Y')`" 
-bibliography: /home/liao/local_depend/citation/neanderthals.bib
-csl: /home/liao/local_depend/style_sheets/apa.csl
+#bibliography: ref.bib
+#csl: apa.csl
 link-citations: yes
 output:
   bookdown::html_document2:
-    css: /home/liao/local_depend/style_sheets/style.css
+    css: style.css
     code_folding: show
     df_print: kable
     toc: yes
@@ -28,16 +28,12 @@ output:
 
 ## PDF Document
 
-This is the yaml header for `bookdown::pdf_document2` output. Using `bookdown` extensions have several advantages. Search 'bookdown' for details.
-
-You may need to attatch an additional `header.tex` and set `latex_engine` to `xelatex` for PDF documents containing multibite characters (e.g. Chinese). Read more about  [header.txt](#pdf-header).
-
 ```{yaml}
 title: "A PDF document YAML Frontmatter"
 author: "廖永賦\\thanks{組別：3 ~~ 系級：心理三 ~~ 學號：B00000000}"
 date: "`r format(Sys.Date(), '%B %e, %Y')`"
-bibliography: /home/liao/local_depend/citation/neanderthals.bib
-csl: /home/liao/local_depend/style_sheets/apa.csl
+#bibliography: ref.bib
+#csl: apa.csl
 documentclass: article
 urlcolor: "blue"
 fontsize: 12pt 
@@ -52,6 +48,10 @@ output:
     includes:
       in_header: header.tex
 ```
+
+This is the yaml header for `bookdown::pdf_document2` output. Using `bookdown` extensions have several advantages. Search 'bookdown' for details.
+
+You may need to attatch an additional `header.tex` and set `latex_engine` to `xelatex` for PDF documents containing multibite characters (e.g. Chinese). Read more about  [header.txt](#pdf-header).
 
 
 Note that Latex only accepts fontsize of 10pt, 11pt, or 12pt. See [this](https://github.com/rstudio/rmarkdown/issues/878) for more detail.
