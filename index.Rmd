@@ -26,7 +26,3 @@ str_date <- "`r format(Sys.Date(), '%B %e, %Y')`"
 klippy::klippy(position = c('top', 'right'), all_precode = T)
 ```
 
-
-## ToDo {-}
-
-- Fix \@ref(shaped-images-html)

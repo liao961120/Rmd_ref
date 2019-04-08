@@ -4,12 +4,9 @@
 
 yaml metadata determines the output file format, looking, and any other additional customizing features of Rmarkdown files.  
 
-## yaml
-
-This is the complete yaml header of this document.
+## HTML Document
 
 ```{yaml}
----
 title: "R Markdown Features"
 subtitle: "A Compact Reference"
 author: "[Yongfu Liao](https://liao961120.github.io/)"
@@ -19,82 +16,48 @@ csl: /home/liao/local_depend/style_sheets/apa.csl
 link-citations: yes
 output:
   bookdown::html_document2:
-    code_folding: show
     css: /home/liao/local_depend/style_sheets/style.css
+    code_folding: show
     df_print: kable
-    toc: true
+    toc: yes
     toc_depth: 2
     toc_float:
-        collapsed: false
----
+      collapsed: yes
 ```
 
-## HTML
 
-```{yaml}
-output:
-  html_document:
-    includes:
-        before_body: mathjax_bm.tex
-    css: ../style_sheets/style.css
-    df_print: kable
-    code_folding: hide
-    fig_width: 7
-    fig_height: 6
-    toc: true
-    toc_depth: 4
-    toc_float: true
-```
+## PDF Document
 
-## PDF
+This is the yaml header for `bookdown::pdf_document2` output. Using `bookdown` extensions have several advantages. Search 'bookdown' for details.
 
 You may need to attatch an additional `header.tex` and set `latex_engine` to `xelatex` for PDF documents containing multibite characters (e.g. Chinese). Read more about  [header.txt](#pdf-header).
+
 ```{yaml}
----
+title: "A PDF document YAML Frontmatter"
 author: "廖永賦\\thanks{組別：3 ~~ 系級：心理三 ~~ 學號：B00000000}"
-output:
-  pdf_document:
-    latex_engine: xelatex    
-    includes:
-        in_header: header.tex
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
+bibliography: /home/liao/local_depend/citation/neanderthals.bib
+csl: /home/liao/local_depend/style_sheets/apa.csl
 documentclass: article
 urlcolor: "blue"
-linestretch: 1.5
 fontsize: 12pt 
-geometry: a5paper, headheight=0pt, margin=0.4in
-linestretch: 1.5
+geometry: a4paper, headheight=0pt, margin=0.4in
+linestretch: 1.35
 links-as-notes: true
----
+output:
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    number_sections: no
+    toc: no
+    includes:
+      in_header: header.tex
 ```
+
 
 Note that Latex only accepts fontsize of 10pt, 11pt, or 12pt. See [this](https://github.com/rstudio/rmarkdown/issues/878) for more detail.
 
-## PDF 2
-This is the yaml header for `bookdown::pdf_document2` output. Using `bookdown` extensions have several advantages. Search 'bookdown' for details.
-```{yaml}
----
-author: "廖永賦\\thanks{組別：3 ~~ 系級：心理三 ~~ 學號：B00000000}"
-output:
-  bookdown::pdf_document2:
-    number_sections: FALSE
-    toc: False
-    includes:
-      in_header: header.tex
-    latex_engine: xelatex
-  bookdown::html_document2:
-    number_sections: FALSE
-    includes:
-      before_body: mathjax_bm.tex
-urlcolor: blue
-always_allow_html: yes
-linestretch: 1.5
-geometry: a4paper #, headheight=0pt, margin=0.4in, landscape
-links-as-notes: true
----
-```
 
-
-## PDF: header.tex{#pdf-header}
+## PDF: header.tex {#pdf-header}
 
 The code below is for generating PDF documents written in (Traditional) Chinese.
 
